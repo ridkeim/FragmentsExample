@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FragmentsExample</string>
+    <string name="text_view">Нажмите кнопку</string>
+    <string name="button_1">кнопка #1</string>
+    <string name="button_2">кнопка #2</string>
+    <string name="button_3">кнопка #3</string>
+</resources>
