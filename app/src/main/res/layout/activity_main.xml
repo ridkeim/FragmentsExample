@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment1"
+        android:id="@+id/container"
         android:name="ru.ridkeim.fragmentsexample.ButtonsFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -16,6 +16,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_margin="@dimen/margin"
-        tools:layout="@layout/fragment_buttons" />
+        tools:layout="@layout/fragment_buttons"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
