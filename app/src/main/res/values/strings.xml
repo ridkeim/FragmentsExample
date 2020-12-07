@@ -4,4 +4,5 @@
     <string name="button_1">кнопка #1</string>
     <string name="button_2">кнопка #2</string>
     <string name="button_3">кнопка #3</string>
+    <string name="button_pressed_message">Вы нажали кнопку #%d</string>
 </resources>

@@ -11,6 +11,6 @@ class MainActivity : AppCompatActivity() , ButtonsFragment.OnSelectedButtonListe
 
     override fun onButtonSelected(index : Int) {
         val dataFragment = supportFragmentManager.findFragmentById(R.id.fragment2) as DataFragment?
-        dataFragment?.setText("Вы нажали кнопку #$index")
+        dataFragment?.setText(index)
     }
 }

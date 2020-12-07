@@ -19,8 +19,8 @@ class DataFragment : Fragment() {
         return rootView
     }
 
-    fun setText(text : String){
-        textView.text = text
+    fun setText(id : Int){
+        textView.text = resources.getString(R.string.button_pressed_message,id)
     }
 
     companion object {
