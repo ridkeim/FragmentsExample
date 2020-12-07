@@ -5,17 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 
 class ButtonsFragment : Fragment(), View.OnClickListener {
 
     interface OnSelectedButtonListener{
         fun onButtonSelected(index : Int)
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
     }
 
     override fun onCreateView(
@@ -44,7 +39,7 @@ class ButtonsFragment : Fragment(), View.OnClickListener {
             R.id.button1 -> 1
             R.id.button2 -> 2
             R.id.button3 -> 3
-            else -> -1
+            else -> DataFragment.BUTTON_INDEX_DEFAULT
         }
     }
 

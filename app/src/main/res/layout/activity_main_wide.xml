@@ -14,10 +14,11 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent=".35" />
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment1"
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin"
         android:name="ru.ridkeim.fragmentsexample.ButtonsFragment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
@@ -25,10 +26,11 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout="@layout/fragment_buttons" />
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment2"
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin"
         android:name="ru.ridkeim.fragmentsexample.DataFragment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

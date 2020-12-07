@@ -20,7 +20,11 @@ class DataFragment : Fragment() {
     }
 
     fun setText(id : Int){
-        textView.text = resources.getString(R.string.button_pressed_message,id)
+        if(id != BUTTON_INDEX_DEFAULT){
+            textView.text = resources.getString(R.string.button_pressed_message,id)
+        } else{
+            textView.text = resources.getString(R.string.text_view)
+        }
     }
 
     companion object {
