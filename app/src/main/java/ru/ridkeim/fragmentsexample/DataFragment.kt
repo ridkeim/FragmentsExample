@@ -22,17 +22,18 @@ class DataFragment : Fragment() {
     ): View? {
         val rootView = inflater.inflate(R.layout.fragment_data, container, false)
         textView = rootView.findViewById(R.id.textView)
-        val selectedState = savedInstanceState?.getInt(BUTTON_INDEX, BUTTON_INDEX_DEFAULT)
-            ?: (arguments?.getInt(BUTTON_INDEX) ?: BUTTON_INDEX_DEFAULT)
-        setText(selectedState)
         Log.d(TAG,"onCreateView selectedState=$selectedState $this")
         return rootView
     }
 
-    fun setText(id : Int){
-        selectedState = id
+    private fun setState(index: Int){
+        selectedState = index
+    }
+
+    fun updateText(index : Int){
+        setState(index)
         if(selectedState != BUTTON_INDEX_DEFAULT){
-            textView.text = resources.getString(R.string.button_pressed_message,id)
+            textView.text = resources.getString(R.string.button_pressed_message,index)
         } else{
             textView.text = resources.getString(R.string.text_view)
         }
@@ -53,6 +54,13 @@ class DataFragment : Fragment() {
         super.onSaveInstanceState(outState)
         outState.putInt(BUTTON_INDEX,selectedState)
         Log.d(TAG,"onSaveInstanceState $this bundle=$outState")
+    }
+
+    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+        super.onViewStateRestored(savedInstanceState)
+        selectedState = arguments?.getInt(BUTTON_INDEX) ?: BUTTON_INDEX_DEFAULT
+        updateText(selectedState)
+        Log.d(TAG,"onStateRestored $this bundle=$savedInstanceState args=$arguments")
     }
 
     companion object {

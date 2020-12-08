@@ -32,8 +32,6 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/margin"
-        android:tag="dataFragmentTag"
-        android:name="ru.ridkeim.fragmentsexample.DataFragment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
